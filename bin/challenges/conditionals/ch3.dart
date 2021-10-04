@@ -14,6 +14,43 @@
  */
 import 'dart:io';
 
+
 void main() {
+  print('Enter a number');
+  int user = int.parse(stdin.readLineSync());
+
+  print('Enter another number :)');
+  int user1 = int.parse(stdin.readLineSync());
+
+  print('''Enter a number between 0 and 4
+  0 = ${user} + ${user1}
+  1 = ${user} - ${user1}
+  2 = ${user} * ${user1}
+  3 = ${user} / ${user1}
+  4 = ${user} % ${user1}''');
+
+  int number = int.parse(stdin.readLineSync());
+
+  if(number == 0)
+  {
+    print(user + user1);
+
+  }else if(number == 1)
+  {
+    print(user - user1);
+  } else if(number == 2)
+  {
+    print(user * user1);
+  }else if(number == 3)
+  {
+    print(user / user1);
+  } else if(number == 4)
+  {
+    print(user % user1);
+  }else{
+    print('Try again');
+  }
+
+
 
 }

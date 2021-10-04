@@ -27,4 +27,71 @@ import 'dart:io';
 
 void main() {
 
+  print('Enter a number');
+  int user = int.parse(stdin.readLineSync());
+
+  print('Enter another number :)');
+  int user1 = int.parse(stdin.readLineSync());
+
+  print('''Enter a number between 0 and 4
+  0 = ${user} + ${user1}
+  1 = ${user} - ${user1}
+  2 = ${user} * ${user1}
+  3 = ${user} / ${user1}
+  4 = ${user} % ${user1}''');
+
+  int number = int.parse(stdin.readLineSync());
+
+
+
+  if(number == 0 )
+  {
+    int results = (user + user1);
+    print(results);
+    if(results.isOdd){
+      print('This number is odd');
+    }else if(results.isEven){
+      print('This number is even');
+    }
+
+  }else if(number == 1)
+  {
+    int results = (user - user1);
+    print(results);
+    if(results.isOdd){
+      print('This number is odd');
+    }else if(results.isEven){
+      print('This number is even');
+    }
+
+
+
+  } else if(number == 2)
+  {
+    int results = (user * user1);
+    print(results);
+    if(results.isOdd){
+      print('This number is odd');
+    }else if(results.isEven){
+      print('This number is even');
+    }
+  }else if(number == 3)
+  {
+    double results = (user.toInt() / user1.toInt());
+    print(results);
+    if(results.toInt() != null){
+      print('This number is odd');
+    }else if(results.toInt() != null){
+      print('This number is even');
+    }
+  } else if(number == 4)
+  {
+    int results =(user % user1);
+    print(results);
+  }
+  else{
+    print('Try again');
+}
+
+
 }
